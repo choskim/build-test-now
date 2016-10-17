@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/detect <build-dir>
+
+CONFIG_FILE="`ls $1 | grep config`"
+
+if [ -z CONFIG_FILE ]; then
+  echo "\n -----> Hugo expects to find a config file in the root directory"
+  exit 1
+fi
+
+echo "Go, Hugo"
+exit 0
